@@ -18,35 +18,38 @@ function App() {
       </form>
 
       <div className="transactions">
-        <div className="transaction">
+        <div className="transaction
+        ">
           <div className="left">
-            <div className="title">+200 Samsung Tv</div>
+            <div className="title"> Samsung Tv</div>
             <div className="description">Time For New Samsung Tv</div>
           </div>
           <div className="right">
-            <div className="price">$200.00</div>
+            <div className="price red">-$500.00</div>
             <div className="datetime">2024-02-06 15:65</div>
           </div>
         </div>
 
-        <div className="transaction">
+        <div className="transaction
+        ">
           <div className="left">
-            <div className="title">+200 Samsung Tv</div>
+            <div className="title"> GiG JOB WEBSITE</div>
             <div className="description">Time For New Samsung Tv</div>
           </div>
           <div className="right">
-            <div className="price">$200.00</div>
+            <div className="price green">+$200.00</div>
             <div className="datetime">2024-02-06 15:65</div>
           </div>
         </div>
 
-        <div className="transaction">
+        <div className="transaction
+        ">
           <div className="left">
-            <div className="title">+200 Samsung Tv</div>
-            <div className="description">Time For New Samsung Tv</div>
+            <div className="title">Apple 15 Pro Max </div>
+            <div className="description">Bought new Phone</div>
           </div>
           <div className="right">
-            <div className="price">$200.00</div>
+            <div className="price red">-$900.00</div>
             <div className="datetime">2024-02-06 15:65</div>
           </div>
         </div>
