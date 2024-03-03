@@ -1,6 +1,13 @@
 import "./App.css";
 import { useState } from "react";
+// import axios from "axios";
 
+// export const api = {
+//   v1: axios.create({
+//     baseURL: "http://localhost:5000/api/v1",
+//     withCredentials: true,
+//   }),
+// };
 function App() {
   const [name, setName] = useState("");
   const [datetime, setDatetime] = useState("");
@@ -17,12 +24,12 @@ function App() {
         name,
         datetime,
         description,
-      }),
-    }).then((res) =>
-      res.json().then((json) => {
-        console.log(json);
       })
-    );
+    }).then((res) => {
+      if (res.ok) {
+        console.log("Transaction added successfully");
+      }
+    })
   }
 
   return (
