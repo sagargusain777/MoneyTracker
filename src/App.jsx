@@ -5,11 +5,24 @@ function App() {
   const [name, setName] = useState("");
   const [datetime, setDatetime] = useState("");
   const [description, setDescription] = useState("");
-  function addNewTranscation(ev){
+  function addNewTranscation(ev) {
     ev.preventDefault();
-    const url = import.meta.env.VITE_API_URL;
-    console.log(url);
-
+    const url = import.meta.env.VITE_API_URL + "/transaction";
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        datetime,
+        description,
+      }),
+    }).then((res) =>
+      res.json().then((json) => {
+        console.log(json);
+      })
+    );
   }
 
   return (
