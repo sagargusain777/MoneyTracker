@@ -1,25 +1,52 @@
 import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [name, setName] = useState("");
+  const [datetime, setDatetime] = useState("");
+  const [description, setDescription] = useState("");
+  function addNewTranscation(ev){
+    ev.preventDefault();
+    const url = import.meta.env.VITE_API_URL;
+    console.log(url);
+
+  }
+
   return (
     <main>
       <h1>
         $400<span>.00</span>
       </h1>
-      <form>
+      <form onSubmit={addNewTranscation}>
         <div className="basic">
-          <input type="text" placeholder={"+200 Samsung Tv"} />
-          <input type="datetime-local"></input>
+          <input
+            type="text"
+            value={name}
+            onChange={(ev) => setName(ev.target.value)}
+            placeholder={"+200 Samsung Tv"}
+          />
+          <input
+            type="datetime-local"
+            value={datetime}
+            onChange={(ev) => setDatetime(ev.target.value)}
+          ></input>
         </div>
         <div className="description">
-          <input type="text" placeholder={"Description"} />
+          <input
+            type="text"
+            value={description}
+            onChange={(ev) => setDescription(ev.target.value)}
+            placeholder={"Description"}
+          />
         </div>
         <button type="submit">Add New Transaction</button>
       </form>
 
       <div className="transactions">
-        <div className="transaction
-        ">
+        <div
+          className="transaction
+        "
+        >
           <div className="left">
             <div className="title"> Samsung Tv</div>
             <div className="description">Time For New Samsung Tv</div>
@@ -30,8 +57,10 @@ function App() {
           </div>
         </div>
 
-        <div className="transaction
-        ">
+        <div
+          className="transaction
+        "
+        >
           <div className="left">
             <div className="title"> GiG JOB WEBSITE</div>
             <div className="description">Time For New Samsung Tv</div>
@@ -42,8 +71,7 @@ function App() {
           </div>
         </div>
 
-        <div className="transaction
-        ">
+        <div className="transaction">
           <div className="left">
             <div className="title">Apple 15 Pro Max </div>
             <div className="description">Bought new Phone</div>
